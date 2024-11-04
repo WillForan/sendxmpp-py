@@ -2,24 +2,26 @@
 
 `sendxmpp` is the XMPP equivalent of sendmail. It is an alternative to the old sendxmpp written in Perl.
 
-Dependencies:
+## Install
+with `pipx` like
 
-- python 3
-- dnspython
-- sleekxmpp
+```
+pipx install git+https://github.com/WillForan/sendxmpp-py
+```
 
-To install them on Ubuntu:
 
-    sudo apt-get install python3 python3-pip
-    sudo pip install dnspython sleekxmpp
+## Configuration
+See the example [sendxmpp.cfg](./sendxmpp.cfg).
 
-[Arch AUR package](https://aur.archlinux.org/packages/sendxmpp-py/)
+`cp sendxmpp.cfg ~/.config/` and edit `~/.config/sendxmpp.cfg` with your XMPP credentials
 
-Installation: just put the script wherever you want.
+```
+[sendxmpp]
+jid = username@example.net
+password = qwerty
+```
 
-Configuration: `cp sendxmpp.cfg ~/.config/` and edit `~/.config/sendxmpp.cfg` with your XMPP credentials
-
-Usage examples:
+## Usage examples
 
 - `echo "This is a test" | sendxmpp user@host`
 - `sendxmpp user@host <README.md`

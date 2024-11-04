@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sendxmpp"
+version = "1.20241104.1"
+
+dependencies = [
+  "dnspython",
+  "slixmpp"
+  #"sleekxmpp-new",
+]
+
+[project.scripts]
+sendxmpp = "sendxmpp:sendxmpp_cli"
+
